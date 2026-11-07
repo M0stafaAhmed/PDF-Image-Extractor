@@ -72,6 +72,8 @@ The canonical script and spec are aligned. The Windows workflow runs regression 
 
 ## License and permissions
 
+See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for important dependency-specific licensing information.
+
 This repository is **proprietary; all rights reserved**. You may view it where access is granted. For a public repository, GitHub's Terms of Service permit users to view and fork it on GitHub. Those platform permissions do not grant a general right to reuse, modify, redistribute, sublicense, or commercially exploit the original material outside GitHub.
 
 Obtain prior, express, written permission from the copyright holder before any such use beyond the rights GitHub grants. Sending a request is not approval; wait for written authorization. See [LICENSE](./LICENSE) for the full scope, exclusions, permission-request route, and treatment of earlier license grants.
