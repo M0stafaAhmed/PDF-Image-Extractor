@@ -1,16 +1,22 @@
 # -*- mode: python ; coding: utf-8 -*-
+
+from pathlib import Path
 from PyInstaller.utils.hooks import collect_all
 
-datas = []
-binaries = []
-hiddenimports = []
-tmp_ret = collect_all('fitz')
-datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]
+ROOT = Path(SPECPATH).resolve()
 
+# PyMuPDF ships native libraries and package data that must be collected.
+datas, binaries, hiddenimports = collect_all("pymupdf")
+
+# Optional application artwork. The application works without these files.
+for asset_name in ("logo.png", "PDFImageExtractor.ico"):
+    asset_path = ROOT / asset_name
+    if asset_path.is_file():
+        datas.append((str(asset_path), "."))
 
 a = Analysis(
-    ['pdf_image_extractor.py'],
-    pathex=[],
+    [str(ROOT / "pdf_image_extractor.py")],
+    pathex=[str(ROOT)],
     binaries=binaries,
     datas=datas,
     hiddenimports=hiddenimports,
@@ -21,19 +27,21 @@ a = Analysis(
     noarchive=False,
     optimize=0,
 )
+
 pyz = PYZ(a.pure)
 
 exe = EXE(
     pyz,
     a.scripts,
     a.binaries,
+    a.zipfiles,
     a.datas,
     [],
-    name='PDFImageExtractor',
+    name="PDFImageExtractor",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
-    upx=True,
+    upx=False,
     upx_exclude=[],
     runtime_tmpdir=None,
     console=False,
@@ -42,4 +50,9 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=(
+        str(ROOT / "PDFImageExtractor.ico")
+        if (ROOT / "PDFImageExtractor.ico").is_file()
+        else None
+    ),
 )
