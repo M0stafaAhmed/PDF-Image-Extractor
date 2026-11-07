@@ -24,7 +24,4 @@ dist/
 # Generated extraction output and local documents
 *_images/
 *.pdf
-*.png
-*.jpg
-*.jpeg
 *.log
