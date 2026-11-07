@@ -69,3 +69,13 @@ See the [PyMuPDF license information](https://pymupdf.readthedocs.io/en/latest/a
 ## Status
 
 The canonical script and spec are aligned. The Windows workflow runs regression tests and builds the executable. Keep the repository private until the distribution license and ownership questions are settled.
+
+## License and permissions
+
+This repository is **proprietary; all rights reserved**. You may view it where access is granted. For a public repository, GitHub's Terms of Service permit users to view and fork it on GitHub. Those platform permissions do not grant a general right to reuse, modify, redistribute, sublicense, or commercially exploit the original material outside GitHub.
+
+Obtain prior, express, written permission from the copyright holder before any such use beyond the rights GitHub grants. Sending a request is not approval; wait for written authorization. See [LICENSE](./LICENSE) for the full scope, exclusions, permission-request route, and treatment of earlier license grants.
+
+**Third-party material:** This notice covers only original material that the repository owner owns or is authorized to license. Third-party software, images, fonts, trademarks, curricula, standards, datasets, contributions, and other external content remain subject to their respective rights and terms. This repository does not relicense them.
+
+**Dependency licensing:** This application depends on PyMuPDF, which is offered under the GNU AGPL or a commercial license. The proprietary notice here applies only to original application material; it does not relicense PyMuPDF or remove its obligations. Review the AGPL terms or obtain the appropriate commercial license before distributing a proprietary application. See [PyMuPDF licensing](https://pymupdf.io/licensing) and [the documentation](https://pymupdf.readthedocs.io/en/latest/about.html).
