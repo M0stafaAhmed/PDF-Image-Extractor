@@ -58,7 +58,7 @@ Build from the repository root:
 pyinstaller --clean --noconfirm .\PDFImageExtractor.spec
 ```
 
-The executable is written under `dist\PDFImageExtractor\` (one-folder output is intentionally used to keep native-library packaging easier to diagnose). The optional `PDFImageExtractor.ico` is used when present; the application works without it.
+The executable is written to `dist\\PDFImageExtractor.exe`. The spec bundles the application and its dependencies into one executable.
 
 ## Dependency and licensing note
 
